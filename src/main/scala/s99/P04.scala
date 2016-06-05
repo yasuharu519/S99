@@ -1,6 +1,6 @@
 package s99
 
-trait P04 {
+object P04 {
   def length_imp[A](ls: List[A], counter: Int): Int = ls match {
     case x::rest => length_imp(rest, counter+1)
     case Nil => counter
