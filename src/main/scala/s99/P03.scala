@@ -1,6 +1,6 @@
 package s99
 
-trait P03 {
+object P03 {
   def nth_imp[A](num:A, ls: List[A], counter: Int): Int = ls match {
     case x::rest => if (x == num) {
       counter

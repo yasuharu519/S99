@@ -1,6 +1,6 @@
 package s99
 
-trait P02 {
+object P02 {
   def penultimate[A](ls: List[A]): A = ls match {
     case x::_::Nil => x
     case _::tail => penultimate(tail)
