@@ -2,6 +2,12 @@ machine:
   timezone:
     Asia/Tokyo
 
+dependencies:
+  override:
+    - "sbt scoverage:compile"
+
 test:
   override:
-    - sbt test
+    - "sbt scoverage:test"
+  post:
+    - "sbt coveralls"
