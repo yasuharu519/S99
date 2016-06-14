@@ -2,8 +2,12 @@ machine:
   timezone:
     Asia/Tokyo
 
+dependencies:
+  override:
+    - sbt test:compile
+
 test:
   override:
-    - "sbt clean coverage test"
+    - sbt clean coverage test
   post:
-    - "sbt coveralls"
+    - sbt coveralls
