@@ -12,10 +12,3 @@ libraryDependencies += "org.scalatest" % "scalatest_2.11" % "2.2.4" % "test"
 
 // build.sbt
 
-// scoverage
-instrumentSettings
-
-org.scoverage.coveralls.CoverallsPlugin.coverallsSettings
-
-// この設定をしないと、結果レポートのhtmlのハイライトがおかしくなる
-ScoverageKeys.highlighting := true
