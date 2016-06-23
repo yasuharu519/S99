@@ -23,4 +23,8 @@ class P99Spec extends FlatSpec with ShouldMatchers {
   "P05" should "implements reverse" in {
     P05.reverse(List(1, 1, 2, 3, 5, 8)) should be (List(8, 5, 3, 2, 1, 1))
   }
+
+  "P06" should "implements palindrome" in {
+    P06.isPalindrome(List(1, 2, 3, 2, 1)) should be (true)
+  }
 }
