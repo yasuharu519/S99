@@ -27,4 +27,12 @@ class P99Spec extends FlatSpec with ShouldMatchers {
   "P06" should "implements palindrome" in {
     P06.isPalindrome(List(1, 2, 3, 2, 1)) should be (true)
   }
+
+  "P07" should "implements flatten" in {
+    P07.flatten(List(List(1, 1), 2, List(3, List(5, 8)))) should be (List(1,1, 2, 3, 5, 8))
+  }
+
+  "P08" should "implements compress" in {
+    P08.compress(List('a,'a,'a,'a,'b,'c,'c,'a,'a,'d,'e,'e,'e,'e)) should be (List('a,'b,'c,'a,'d,'e))
+  }
 }
