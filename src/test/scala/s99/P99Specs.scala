@@ -43,4 +43,12 @@ class P99Spec extends FlatSpec with ShouldMatchers {
   it should "implement compressTailRecursive" in {
     P08.compressTailRecursive(List('a,'a,'a,'a,'b,'c,'c,'a,'a,'d,'e,'e,'e,'e)) should be (List('a,'b,'c,'a,'d,'e))
   }
+
+  "P09" should "implement pack" in {
+    P09.pack(List('a,'a,'a,'a,'b,'c,'c,'a,'a,'d,'e,'e,'e,'e)) should be (List(List('a,'a,'a,'a),List('b),List('c,'c), List('a,'a), List('d), List('e,'e,'e,'e)))
+  }
+
+  it should "implement pack (return empty list)" in {
+    P09.pack(List()) should be (List(List()))
+  }
 }
