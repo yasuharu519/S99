@@ -10,3 +10,8 @@ object P10 {
     }
   }
 }
+
+// object P10 {
+//   import P09.pack
+//   def encode[A](ls: List[A]): List[(Int, A)] = pack(ls) map { e => (e.length, e.head) }
+// }
