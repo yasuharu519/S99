@@ -51,4 +51,8 @@ class P99Spec extends FlatSpec with ShouldMatchers {
   it should "implement pack (return empty list)" in {
     P09.pack(List()) should be (List(List()))
   }
+
+  "P10" should "implement encode" in {
+    P10.encode(List('a,'a,'a,'a,'b,'c,'c,'a,'a,'d,'e,'e,'e,'e)) should be (List((4,'a),(1,'b),(2,'c),(2,'a),(1,'d),(4,'e)))
+  }
 }
