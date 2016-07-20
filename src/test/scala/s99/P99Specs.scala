@@ -59,4 +59,8 @@ class P99Spec extends FlatSpec with ShouldMatchers {
   "P11" should "implement encodeModified" in {
     P11.encodeModified(List('a,'a,'a,'a,'b,'c,'c,'a,'a,'d,'e,'e,'e,'e)) should be (List((4,'a),'b,(2,'c),(2,'a),'d,(4,'e)))
   }
+
+  "P12" should "implement decode" in {
+    P12.decode(List((4, 'a), (1, 'b), (2, 'c), (2, 'a), (1, 'd), (4, 'e))) should be (List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e))
+  }
 }
