@@ -63,4 +63,12 @@ class P99Spec extends FlatSpec with ShouldMatchers {
   "P12" should "implement decode" in {
     P12.decode(List((4, 'a), (1, 'b), (2, 'c), (2, 'a), (1, 'd), (4, 'e))) should be (List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e))
   }
+
+  "P13" should "implement encodeDirect" in {
+    P13.encodeDirect(List('a,'a,'a,'a,'b,'c,'c,'a,'a,'d,'e,'e,'e,'e)) should be (List((4,'a), (1,'b), (2,'c), (2,'a), (1,'d), (4,'e)))
+  }
+
+  "P14" should "implement duplicate" in {
+    P14.duplicate(List('a,'b, 'c, 'c, 'd)) should be (List('a, 'a, 'b, 'b, 'c, 'c, 'c, 'c, 'd, 'd))
+  }
 }
