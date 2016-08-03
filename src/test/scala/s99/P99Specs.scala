@@ -75,4 +75,12 @@ class P99Spec extends FlatSpec with ShouldMatchers {
   "P15" should "implement duplicateN" in {
     P15.duplicateN(3, List('a, 'b, 'c, 'c, 'd)) should be (List('a, 'a, 'a, 'b, 'b, 'b, 'c, 'c, 'c, 'c, 'c, 'c, 'd, 'd, 'd))
   }
+
+  "P16" should "implement drop" in {
+    P16.drop(3, List('a,'b,'c,'d,'e,'f,'g,'h,'i,'j,'k)) should be (List('a,'b,'d,'e,'g,'h,'j,'k))
+  }
+
+  "P17" should "implement split" in {
+    P17.split(3, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k)) should be (List('a, 'b, 'c), List('d, 'e, 'f, 'g, 'h, 'i, 'j, 'k))
+  }
 }
