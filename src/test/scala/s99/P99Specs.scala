@@ -83,4 +83,8 @@ class P99Spec extends FlatSpec with ShouldMatchers {
   "P17" should "implement split" in {
     P17.split(3, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k)) should be (List('a, 'b, 'c), List('d, 'e, 'f, 'g, 'h, 'i, 'j, 'k))
   }
+
+  "P18" should "implement slice" in {
+    P18.slice(3, 7, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k)) should be (List('d, 'e, 'f, 'g))
+  }
 }
